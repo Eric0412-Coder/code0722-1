@@ -1,0 +1,15 @@
+# 設定三角形的高度
+height = 4
+
+# 使用 for 迴圈來建立等腰三角形
+for i in range(height):
+    # 打印空白部分
+    for j in range(height - i - 1):
+        print(' ', end='')
+
+    # 打印星號部分
+    for k in range(2 * i + 1):
+        print('*', end='')
+
+    # 換行
+    print()
