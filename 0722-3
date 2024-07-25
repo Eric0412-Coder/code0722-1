@@ -1,0 +1,26 @@
+def is_prime(n):
+    """檢查一個數是否為質數"""
+    if n <= 1:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def find_primes_up_to(limit):
+    """找到 0 到 limit 之間的所有質數"""
+    primes = []
+    for num in range(limit + 1):
+        if is_prime(num):
+            primes.append(num)
+    return primes
+
+# 讓使用者輸入一個數字
+limit = int(input("請輸入一個數字: "))
+
+# 找到所有質數
+primes = find_primes_up_to(limit)
+
+# 顯示質數的數量和質數列表
+print(f"0 到 {limit} 之間共有 {len(primes)} 個質數")
+print("質數有:", primes)
